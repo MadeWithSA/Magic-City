@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Профиль — Magic City</title>
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('mc_theme')||'dark'}catch(e){}</script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="profile" class="inner">
+  <div id="site-header"></div>
+  <main class="page"><div class="wrap">
+    <h1 class="page-title">Профиль</h1>
+    <p class="page-sub">Ваши данные и история заказов хранятся на этом устройстве</p>
+    <div class="profile-layout">
+      <aside class="panel">
+        <div class="avatar" id="avatar">M</div>
+        <div class="profile-name" id="profileName">Гость</div>
+        <div class="stats">
+          <div class="stat"><b id="stOrders">0</b><span>заказов</span></div>
+          <div class="stat"><b id="stFav">0</b><span>в избранном</span></div>
+          <div class="stat"><b id="stSum">0</b><span>на сумму, ₽</span></div>
+        </div>
+        <form id="profileForm">
+          <div class="field"><label for="pName">Имя</label><input id="pName" placeholder="Ваше имя" /></div>
+          <div class="field"><label for="pPhone">Телефон</label><input id="pPhone" type="tel" placeholder="+998 90 123 45 67" /></div>
+          <div class="field"><label for="pAddress">Адрес</label><input id="pAddress" placeholder="Город, улица, дом" /></div>
+          <button class="btn" type="submit">Сохранить</button>
+        </form>
+        <div style="display:flex;gap:10px;margin-top:12px">
+          <button class="btn ghost" id="themeBtn" type="button" style="flex:1;margin:0">Сменить тему</button>
+          <button class="btn ghost danger" id="clearBtn" type="button" style="flex:1;margin:0">Очистить</button>
+        </div>
+      </aside>
+      <section>
+        <h2 class="section-title" style="margin-top:0">Мои заказы</h2>
+        <div id="ordersBox"></div>
+      </section>
+    </div>
+  </div></main>
+  <div id="site-footer"></div>
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
